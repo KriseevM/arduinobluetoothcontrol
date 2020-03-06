@@ -360,7 +360,7 @@
             this.MinimumSize = new System.Drawing.Size(200, 420);
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "ы";
+            this.Text = "Arduino Bluetooth control";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
