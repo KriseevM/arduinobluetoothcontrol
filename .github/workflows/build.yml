@@ -25,4 +25,4 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Compile project via mcs compiler
-      run: mcs -pkg:dotnet Program.cs -lib Form1.cs -lib Form1.Designer.cs 
+      run: mcs -pkg:dotnet Program.cs -lib Form1.cs -lib Form1.Designer.cs -o control
