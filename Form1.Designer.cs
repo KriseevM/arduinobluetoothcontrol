@@ -54,7 +54,7 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.serialPortNameCB = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.updateComBT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // W
@@ -315,23 +315,23 @@
             this.serialPortNameCB.Size = new System.Drawing.Size(103, 21);
             this.serialPortNameCB.TabIndex = 31;
             // 
-            // button1
+            // updateComBT
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(177, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Обновить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.updateComBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateComBT.Location = new System.Drawing.Point(177, 323);
+            this.updateComBT.Name = "updateComBT";
+            this.updateComBT.Size = new System.Drawing.Size(75, 23);
+            this.updateComBT.TabIndex = 32;
+            this.updateComBT.Text = "Обновить";
+            this.updateComBT.UseVisualStyleBackColor = true;
+            this.updateComBT.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 381);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.updateComBT);
             this.Controls.Add(this.serialPortNameCB);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.STOPCommand);
@@ -360,7 +360,7 @@
             this.MinimumSize = new System.Drawing.Size(200, 420);
             this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "Form1";
+            this.Text = "ы";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -396,7 +396,7 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox serialPortNameCB;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button updateComBT;
     }
 }
 
