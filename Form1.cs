@@ -97,13 +97,22 @@ namespace ARDUINOBTCONTROL
 
         void SendCommand(TextBox commandTextBox)
         {
-            if(serialPort1.IsOpen)
+            try
             {
-                serialPort1.Write(commandTextBox.Text);
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(commandTextBox.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось подключиться к последовательному порту. Убедитесь, что порт еще доступен, обновите список и выберите порт в списке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch(Exception e)
             {
-                MessageBox.Show("Не удалось подключиться к последовательному порту. Убедитесь, что порт еще доступен, обновите список и выберите порт в списке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Disconnect();
+                MessageBox.Show("Соединение прервано из-за ошибки. " + e.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
