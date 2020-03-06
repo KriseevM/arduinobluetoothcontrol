@@ -48,6 +48,7 @@ namespace ARDUINOBTCONTROL
                 A.Enabled = false;
                 S.Enabled = false;
                 D.Enabled = false;
+                STOPCommand.Enabled = true;
                 updateComBT.Enabled = true;
                 serialPortNameCB.Enabled = true;
                 ConnectButton.Text = "Подключиться";
@@ -69,6 +70,7 @@ namespace ARDUINOBTCONTROL
             A.Enabled = false;
             S.Enabled = false;
             D.Enabled = false;
+            STOPCommand.Enabled = true;
             updateComBT.Enabled = true;
             serialPortNameCB.Enabled = true;
             ConnectButton.Text = "Подключиться";
@@ -90,6 +92,7 @@ namespace ARDUINOBTCONTROL
             A.Enabled = true;
             S.Enabled = true;
             D.Enabled = true;
+            STOPCommand.Enabled = false;
             updateComBT.Enabled = false;
             serialPortNameCB.Enabled = false;
             ConnectButton.Text = "Отключиться";
