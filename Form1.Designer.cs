@@ -48,23 +48,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.QCommand = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.portNumber = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.STOPCommand = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.portNumber)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.serialPortNameCB = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // W
             // 
             this.W.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.W.Enabled = false;
             this.W.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.W.Location = new System.Drawing.Point(68, 12);
             this.W.Name = "W";
-            this.W.Size = new System.Drawing.Size(50, 50);
+            this.W.Size = new System.Drawing.Size(130, 50);
             this.W.TabIndex = 0;
             this.W.Text = "W";
             this.W.UseVisualStyleBackColor = true;
@@ -75,10 +76,11 @@
             // 
             this.S.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.S.Enabled = false;
             this.S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.S.Location = new System.Drawing.Point(68, 68);
             this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(50, 50);
+            this.S.Size = new System.Drawing.Size(130, 50);
             this.S.TabIndex = 1;
             this.S.Text = "S";
             this.S.UseVisualStyleBackColor = true;
@@ -88,8 +90,9 @@
             // D
             // 
             this.D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.D.Enabled = false;
             this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.D.Location = new System.Drawing.Point(122, 68);
+            this.D.Location = new System.Drawing.Point(202, 68);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(50, 50);
             this.D.TabIndex = 2;
@@ -100,6 +103,7 @@
             // 
             // A
             // 
+            this.A.Enabled = false;
             this.A.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.A.Location = new System.Drawing.Point(12, 68);
             this.A.Name = "A";
@@ -112,6 +116,7 @@
             // 
             // Q
             // 
+            this.Q.Enabled = false;
             this.Q.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Q.Location = new System.Drawing.Point(12, 12);
             this.Q.Name = "Q";
@@ -125,8 +130,9 @@
             // E
             // 
             this.E.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.E.Enabled = false;
             this.E.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.E.Location = new System.Drawing.Point(122, 12);
+            this.E.Location = new System.Drawing.Point(202, 12);
             this.E.Name = "E";
             this.E.Size = new System.Drawing.Size(50, 50);
             this.E.TabIndex = 5;
@@ -139,7 +145,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(7, 121);
+            this.label1.Location = new System.Drawing.Point(7, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 26);
             this.label1.TabIndex = 6;
@@ -160,7 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WCommand.Location = new System.Drawing.Point(36, 144);
             this.WCommand.Name = "WCommand";
-            this.WCommand.Size = new System.Drawing.Size(136, 20);
+            this.WCommand.Size = new System.Drawing.Size(216, 20);
             this.WCommand.TabIndex = 8;
             this.WCommand.Text = "U";
             // 
@@ -170,7 +176,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ACommand.Location = new System.Drawing.Point(36, 170);
             this.ACommand.Name = "ACommand";
-            this.ACommand.Size = new System.Drawing.Size(136, 20);
+            this.ACommand.Size = new System.Drawing.Size(216, 20);
             this.ACommand.TabIndex = 10;
             this.ACommand.Text = "L";
             // 
@@ -189,7 +195,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SCommand.Location = new System.Drawing.Point(36, 196);
             this.SCommand.Name = "SCommand";
-            this.SCommand.Size = new System.Drawing.Size(136, 20);
+            this.SCommand.Size = new System.Drawing.Size(216, 20);
             this.SCommand.TabIndex = 12;
             this.SCommand.Text = "D";
             // 
@@ -208,7 +214,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DCommand.Location = new System.Drawing.Point(36, 222);
             this.DCommand.Name = "DCommand";
-            this.DCommand.Size = new System.Drawing.Size(136, 20);
+            this.DCommand.Size = new System.Drawing.Size(216, 20);
             this.DCommand.TabIndex = 14;
             this.DCommand.Text = "R";
             // 
@@ -227,7 +233,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ECommand.Location = new System.Drawing.Point(36, 248);
             this.ECommand.Name = "ECommand";
-            this.ECommand.Size = new System.Drawing.Size(136, 20);
+            this.ECommand.Size = new System.Drawing.Size(216, 20);
             this.ECommand.TabIndex = 16;
             this.ECommand.Text = "F";
             // 
@@ -246,7 +252,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.QCommand.Location = new System.Drawing.Point(36, 274);
             this.QCommand.Name = "QCommand";
-            this.QCommand.Size = new System.Drawing.Size(136, 20);
+            this.QCommand.Size = new System.Drawing.Size(216, 20);
             this.QCommand.TabIndex = 18;
             this.QCommand.Text = "E";
             // 
@@ -259,35 +265,12 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Q";
             // 
-            // portNumber
-            // 
-            this.portNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.portNumber.Location = new System.Drawing.Point(118, 326);
-            this.portNumber.Name = "portNumber";
-            this.portNumber.Size = new System.Drawing.Size(54, 20);
-            this.portNumber.TabIndex = 25;
-            this.portNumber.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 328);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 13);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Номер COM-порта:";
-            // 
             // ConnectButton
             // 
             this.ConnectButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ConnectButton.Location = new System.Drawing.Point(0, 358);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(184, 23);
+            this.ConnectButton.Size = new System.Drawing.Size(264, 23);
             this.ConnectButton.TabIndex = 27;
             this.ConnectButton.Text = "Подключиться";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -299,7 +282,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.STOPCommand.Location = new System.Drawing.Point(51, 300);
             this.STOPCommand.Name = "STOPCommand";
-            this.STOPCommand.Size = new System.Drawing.Size(121, 20);
+            this.STOPCommand.Size = new System.Drawing.Size(201, 20);
             this.STOPCommand.TabIndex = 29;
             this.STOPCommand.Text = "s";
             // 
@@ -312,16 +295,48 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "STOP";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 328);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "COM-порт";
+            // 
+            // serialPortNameCB
+            // 
+            this.serialPortNameCB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.serialPortNameCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.serialPortNameCB.FormattingEnabled = true;
+            this.serialPortNameCB.Location = new System.Drawing.Point(68, 325);
+            this.serialPortNameCB.Name = "serialPortNameCB";
+            this.serialPortNameCB.Size = new System.Drawing.Size(103, 21);
+            this.serialPortNameCB.TabIndex = 31;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(177, 325);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Обновить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(184, 381);
+            this.ClientSize = new System.Drawing.Size(264, 381);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.serialPortNameCB);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.STOPCommand);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ConnectButton);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.portNumber);
             this.Controls.Add(this.QCommand);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ECommand);
@@ -349,7 +364,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.portNumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,12 +390,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox QCommand;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown portNumber;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.TextBox STOPCommand;
         private System.Windows.Forms.Label label9;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox serialPortNameCB;
+        private System.Windows.Forms.Button button1;
     }
 }
 
