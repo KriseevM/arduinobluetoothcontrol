@@ -22,15 +22,37 @@ namespace ARDUINOBTCONTROL
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen)
+            try
             {
-                Disconnect();
+                if (serialPort1.IsOpen)
+                {
+                    Disconnect();
+                }
+                else
+                {
+                    Connect();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                Connect();
+                MessageBox.Show("Соединение прервано из-за ошибки. " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                QCommand.Enabled = true;
+                WCommand.Enabled = true;
+                ECommand.Enabled = true;
+                ACommand.Enabled = true;
+                SCommand.Enabled = true;
+                DCommand.Enabled = true;
+                Q.Enabled = false;
+                W.Enabled = false;
+                E.Enabled = false;
+                A.Enabled = false;
+                S.Enabled = false;
+                D.Enabled = false;
+                STOPCommand.Enabled = true;
+                updateComBT.Enabled = true;
+                serialPortNameCB.Enabled = true;
+                ConnectButton.Text = "Подключиться";
             }
-            
         }
 
         private void Disconnect()
@@ -48,6 +70,9 @@ namespace ARDUINOBTCONTROL
             A.Enabled = false;
             S.Enabled = false;
             D.Enabled = false;
+            STOPCommand.Enabled = true;
+            updateComBT.Enabled = true;
+            serialPortNameCB.Enabled = true;
             ConnectButton.Text = "Подключиться";
         }
 
@@ -67,18 +92,30 @@ namespace ARDUINOBTCONTROL
             A.Enabled = true;
             S.Enabled = true;
             D.Enabled = true;
+            STOPCommand.Enabled = false;
+            updateComBT.Enabled = false;
+            serialPortNameCB.Enabled = false;
             ConnectButton.Text = "Отключиться";
         }
 
         void SendCommand(TextBox commandTextBox)
         {
-            if(serialPort1.IsOpen)
+            try
             {
-                serialPort1.Write(commandTextBox.Text);
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(commandTextBox.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось подключиться к последовательному порту. Убедитесь, что порт еще доступен, обновите список и выберите порт в списке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch(Exception e)
             {
-                MessageBox.Show("Не удалось подключиться к последовательному порту. Убедитесь, что порт еще доступен, обновите список и выберите порт в списке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Disconnect();
+                MessageBox.Show("Соединение прервано из-за ошибки. " + e.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
