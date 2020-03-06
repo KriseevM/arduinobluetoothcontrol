@@ -22,15 +22,34 @@ namespace ARDUINOBTCONTROL
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen)
+            try
             {
-                Disconnect();
+                if (serialPort1.IsOpen)
+                {
+                    Disconnect();
+                }
+                else
+                {
+                    Connect();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                Connect();
+                MessageBox.Show("Соединение прервано из-за ошибки. " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                QCommand.Enabled = true;
+                WCommand.Enabled = true;
+                ECommand.Enabled = true;
+                ACommand.Enabled = true;
+                SCommand.Enabled = true;
+                DCommand.Enabled = true;
+                Q.Enabled = false;
+                W.Enabled = false;
+                E.Enabled = false;
+                S.Enabled = false;
+                D.Enabled = false;
+                serialPortNameCB.Enabled = true;
+                ConnectButton.Text = "Подключиться";
             }
-            
         }
 
         private void Disconnect()
